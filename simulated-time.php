@@ -21,5 +21,5 @@
 
 	$start = mktime($h, $i, 0, $m, $d, $y);
 	$offset = $time - $start;
-	$simulated = strtotime(sprintf('%04d-01-01 00:00:00',$p)) + ($offset * $x); //-62135596800
+	$simulated = strtotime(sprintf('%04d-01-01 00:00:00',$p)) + ($offset * $x);
 ?>

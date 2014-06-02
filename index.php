@@ -59,7 +59,7 @@
 			<dt>Offset</dt>
 				<dd id="offset"><?php echo $offset; ?></dd>
 			<dt>Simulated</dt>
-				<dd id="simulated" data-timestamp="<?php echo $simulated; ?>"><?php echo sprintf('Year %1$d, Day %2$s',(int)gmdate('Y',$simulated),gmdate('z - jS M @ g:ia',$simulated)); ?></dd>
+				<dd id="simulated" data-initial-year="<?php echo $p; ?>" data-timestamp="<?php echo $simulated; ?>"><?php echo sprintf('Year %1$d, Day %2$s',(int)gmdate('Y',$simulated),gmdate('z - jS M @ g:ia',$simulated)); ?></dd>
 		</dl>
 
 		<h2>Examples</h2>

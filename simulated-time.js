@@ -6,15 +6,20 @@ $(function() {
 	    offset = parseInt($('#offset').text(),10),
 	    simulated = parseInt($('#simulated').data('timestamp') * 1000,10),
 	    simulated_date = new Date(simulated),
+	    initial_year = new Date(),
 	    time;
 	
+	initial_year.setFullYear(parseInt($('#simulated').data('initial-year'),10),0,1)
+	initial_year.setHours(0,0,0);
+	initial_year = initial_year.getTime();
+
 	setInterval(function() {
 		if (update) {
 			time = new Date();
 			timezone = (time.getTimezoneOffset() * 60);
 			time = time.getTime();
 			offset = time - start;
-			simulated = -62135596800000 + (offset * multiplier);
+			simulated = initial_year + (offset * multiplier);
 
 			$('#now').attr(
 				'data-timestamp',
