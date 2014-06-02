@@ -1,0 +1,35 @@
+body {
+	font-family:arial,sans-serif;
+}
+.cf:before,
+.cf:after {
+    content:' ';
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+.cf {
+    *zoom:1;
+}
+dt,
+dd {
+	float:left;
+	padding:.25em;
+}
+dt {
+	clear:both;
+	font-weight:700;
+	width:5em;
+}
+.options {
+	clear:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+.options li {
+	float:left;
+	width:33.3%;
+}
