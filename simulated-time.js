@@ -36,7 +36,7 @@ $(function() {
 				'data-timestamp',
 				parseInt(simulated / 1000,10)
 			).text(
-				'Year ' + parseInt(date('Y',(simulated / 1000)),10) + ', Day ' + date('z - jS M @ g:ia',(simulated / 1000))
+				'Year ' + parseInt(date('Y',(simulated / 1000) + timezone),10) + ', Day ' + date('z - jS M @ g:ia',(simulated / 1000) + timezone)
 			);
 		}
 	}, (multiplier > 60 ? (1000 / (multiplier / 60)) : 1000));
