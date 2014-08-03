@@ -52,14 +52,16 @@
 		<h1>Simulated Time (1 second = <?php echo $option; ?>)</h1>
 
 		<dl class="cf">
+			<dt>Timezone</dt>
+				<dd><?php echo date('T',$simulated); ?></dd>
 			<dt>Now</dt>
-				<dd id="now" data-update="<?php echo (isset($_GET['t'])) ? 0 : 1 ?>" data-timestamp="<?php echo $time; ?>"><?php echo gmdate('jS M Y @ g:ia', $time); ?></d>
+				<dd id="now" data-update="<?php echo (isset($_GET['t'])) ? 0 : 1 ?>" data-timestamp="<?php echo $time; ?>"><?php echo date('jS M Y @ g:ia', $time); ?></dd>
 			<dt>Start</dt>
-				<dd id="start" data-timestamp="<?php echo $start; ?>"><?php echo gmdate('jS M Y @ g:ia', $start); ?></dd>
+				<dd id="start" data-timestamp="<?php echo $start; ?>"><?php echo date('jS M Y @ g:ia', $start); ?></dd>
 			<dt>Offset</dt>
 				<dd id="offset"><?php echo $offset; ?></dd>
 			<dt>Simulated</dt>
-				<dd id="simulated" data-initial-year="<?php echo $p; ?>" data-timestamp="<?php echo $simulated; ?>"><?php echo sprintf('Year %1$d, Day %2$s',(int)gmdate('Y',$simulated),gmdate('z - jS M @ g:ia',$simulated)); ?></dd>
+				<dd id="simulated" data-initial-year="<?php echo $p; ?>" data-timestamp="<?php echo $simulated; ?>"><?php echo sprintf('Year %1$d, Day %2$s',(int)date('Y',$simulated),date('z - jS M @ g:ia',$simulated)); ?></dd>
 		</dl>
 
 		<h2>Examples</h2>
